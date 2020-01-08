@@ -35,3 +35,4 @@ std::vector<std::vector<std::string>>
     return res;
 }
 };
+https://leetcode.com/problems/search-suggestions-system/
