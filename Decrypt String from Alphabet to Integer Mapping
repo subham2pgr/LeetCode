@@ -1,0 +1,23 @@
+class Solution {
+public:
+    string freqAlphabets(string s) {
+        if(s.empty()) {
+            return "";
+        }
+        string res;
+        int index = 0;
+        while(index < s.size()) {
+            if(index + 2 < s.size() && s[index + 2] == '#') {
+                res.push_back(stoi(s.substr(index, 2)) - 1 + 'a');
+                index += 3;
+            }
+            else {
+                res.push_back(s[index]- '1' + 'a');
+                ++index;
+            }
+        }
+        return res;
+    }
+};
+
+https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping/
