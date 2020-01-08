@@ -1,0 +1,16 @@
+https://leetcode.com/problems/remove-element/submissions/
+class Solution {
+public:
+int removeElement(vector<int>& nums, int val) {
+
+    auto index = find(nums.begin(),nums.end(),val);
+    while(index != nums.end())
+    {
+        nums.erase(index);
+        index = find(nums.begin(),nums.end(),val);
+    }
+    
+    return nums.size();
+    
+}
+};
